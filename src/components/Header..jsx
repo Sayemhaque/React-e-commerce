@@ -8,7 +8,7 @@ const Header = () => {
                 {/* Logo */}
               <img src={Logo} className="w-50 h-50" alt="" />
               {/* Links */}
-               <ul className='md:flex  mt-8 md:mt-0 space-y-7 md:space-y-0  text-slate-200 gap-5 items-center font-bold'>
+               <ul className='md:flex  mt-8 md:mt-0 space-y-7 md:space-y-0  text-gray-100 gap-5 items-center font-bold'>
                 <li><a href="#">Order</a></li>
                 <li><a href="#">Order Review</a></li>
                 <li><a href="#">Manage Inventory</a></li>
