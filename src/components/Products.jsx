@@ -9,8 +9,8 @@ const Products = () => {
         fetch(URL).then(res => res.json()).then(data => setProducts(data))
     } , [])
     return (
-        <div>
-          <Product/>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 m-10 '>
+            {products?.map(product =>  <Product key={product.id} product={product}/>)}
         </div>
     );
 };
