@@ -18,7 +18,7 @@ const Cart = ({ cartItems }) => {
                    </div>
                 )}
                 <hr className='border-black mt-4' />
-                <h4 className='text-md font-bold mt-3'>Total price : </h4>
+                <h4 className='text-md font-bold mt-3'>Total price : {cartItems.length}</h4>
         </div>
     );
 };
