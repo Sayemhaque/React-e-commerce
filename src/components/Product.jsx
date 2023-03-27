@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Product = (props) => {
     const {name,img,price,quantity,ratings,ratingsCoun,seller,shipping,stock}  = props.product;
-   const handleCart = props.handleProductCart;
+   const handleCart = props.handleCart;
    
     return (
         <div>
