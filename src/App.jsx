@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       {/* Header section */}
-     <Header/>
+     <Header />
      <main>
       <Shop/>
      </main>

@@ -2,10 +2,16 @@
 import React from 'react';
 
 const Cart = ({ cartItems }) => {
+
+    let total = 0;
+    for(const product of cartItems){
+     total = total + product.price;
+    }
     return (
         <div className='mt-8'>
             <h2 className='text-center font-bold text-lg'>Order summary</h2>
             <h3 className='text-center font-bold mt-4'>Total items : {cartItems.length}</h3>
+            <h4 className='text-md font-bold mt-3 text-center'>Total price: ${total}</h4>
             {cartItems.length === 0 ? <p className='mt-5 text-center text-lg font-bold'>No cart items</p> :
                 cartItems.map(cart =>
                    <div>
@@ -18,7 +24,7 @@ const Cart = ({ cartItems }) => {
                    </div>
                 )}
                 <hr className='border-black mt-4' />
-                <h4 className='text-md font-bold mt-3'>Total price : {cartItems.length}</h4>
+             
         </div>
     );
 };

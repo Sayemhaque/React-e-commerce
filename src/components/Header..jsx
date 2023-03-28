@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../images/Logo.svg'
 const Header = () => {
     return (
-        <div className='bg-slate-800 py-5'>
+        <div className='bg-slate-800 py-5 sticky top-0 z-50 w-full'>
            <div className='md:max-w-[1100px] mx-auto px-5 lg:px-0'>
               <div className='md:flex  justify-between'>
                 {/* Logo */}
