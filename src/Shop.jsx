@@ -45,7 +45,7 @@ const Shop = () => {
          setCart(savedCart)
         
     } ,[products])
-
+    
     return (
         <div className='grid grid-cols-4'>
             {/* Products section */}

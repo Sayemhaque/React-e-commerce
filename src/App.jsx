@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom"
 import Header from "./components/Header."
 import Shop from "./Shop"
 
@@ -10,6 +11,7 @@ function App() {
      <main>
       <Shop/>
      </main>
+     <Outlet/>
     </div>
   )
 }
