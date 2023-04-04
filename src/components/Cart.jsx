@@ -1,15 +1,16 @@
 
 import React from 'react';
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cart }) => {
 
     let total = 0;
     let quantity = 0;
-    for(const product of cartItems){
+    for(const product of cart){
+        console.log(product)
         product.quantity = product.quantity || 1;
      total = total + product.price * product.quantity;
      quantity = quantity + product.quantity;
-     
+     console.log(quantity)
 
     }
     return (
@@ -17,18 +18,7 @@ const Cart = ({ cartItems }) => {
             <h2 className='text-center font-bold text-lg'>Order summary</h2>
             <h3 className='text-center font-bold mt-4'>Total items : {quantity}</h3>
             <h4 className='text-md font-bold mt-3 text-center'>Total price: ${total}</h4>
-            {cartItems.length === 0 ? <p className='mt-5 text-center text-lg font-bold'>No cart items</p> :
-                cartItems.map(cart =>
-                   <div>
-                     <div className='flex gap-5 items-center mt-6' key={cart.id}>
-                        <p>Price : ${cart.price}</p>
-                        <img src={cart.img} className='w-12 h-12 mt-2' alt="" /> 
-                        <p>Quantity : {cart.quantity}</p>
-                        </div>
-                      
-                   </div>
-                )}
-                <hr className='border-black mt-4' />
+             <hr className='border-black mt-4' />
              
         </div>
     );

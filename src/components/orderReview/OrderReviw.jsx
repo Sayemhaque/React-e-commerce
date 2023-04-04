@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Cart from '../Cart';
+import { useLoaderData } from 'react-router-dom';
+import ReviewCart from '../reviewcart/ReviewCart';
 
 const OrderReviw = () => {
+    const cart = useLoaderData();
     return (
-        <div>
-            <h1>Order Review page</h1>
+        <div className='grid grid-cols-2 place-items-center'>
+            <div>
+               {cart.map(product => <ReviewCart cartItem={product}/>)}
+            </div>
+         <Cart cart={cart}/>
         </div>
     );
 };

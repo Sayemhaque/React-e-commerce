@@ -27,6 +27,7 @@ const Shop = () => {
         fetch(URL).then(res => res.json()).then(data => setProducts(data))
        
     } , [])
+    
 
 
     useEffect(() =>  {
@@ -55,7 +56,7 @@ const Shop = () => {
 
             {/* cart section */}
             <div className=''>
-                <Cart cartItems={cart}/>
+                <Cart cart={cart}/>
             </div>
         </div>
     );
